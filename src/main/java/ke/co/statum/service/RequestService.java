@@ -2,31 +2,17 @@ package ke.co.statum.service;
 
 import org.springframework.stereotype.Service;
 
+import ke.co.statum.model.RequestModel;
+
 @Service
 public class RequestService {
 
-	private String string;
-
-	public RequestService() {
-
+	public Object processApiRequest(RequestModel request) {
+		
+		return null;
 	}
 
-	public RequestService(String string) {
-		this.string = string;
-	}
-
-	public String getString() {
-		return string;
-	}
-
-	public void setString(String string) {
-		this.string = string;
-	}
-
-	@Override
-	public String toString() {
-		return "RequestService [string=" + string + "]";
-	}
+	
 	
 	
 	
