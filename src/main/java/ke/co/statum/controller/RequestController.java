@@ -4,6 +4,8 @@
  */
 package ke.co.statum.controller;
 
+import javax.validation.Valid;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -50,7 +52,8 @@ public class RequestController {
 	
 	
 	/**
-	 * Given an index k, return the kth row of the Pascal's triangle
+	 * Given an index k, 
+	 * return the kth row of the Pascal's triangle
 	 */
 	@PostMapping(path = "/v1/pascal-sort", consumes = "application/json")
 	public Object receivePascalApiRequest(@RequestBody final RequestModel request) {

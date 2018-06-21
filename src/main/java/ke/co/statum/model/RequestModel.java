@@ -2,10 +2,14 @@ package ke.co.statum.model;
 
 import java.io.Serializable;
 
+import javax.validation.constraints.Size;
+
 public class RequestModel implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	private String string;
+	
+	@Size(min=1, message="Minimum index should be 1")
 	private Long index;
 
 	public RequestModel(Long index) {
