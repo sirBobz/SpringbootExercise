@@ -17,7 +17,7 @@ public class Response {
 	public Object missingRequestData() {
 		HashMap<String, String> response = new HashMap<String, String>();
 
-		response.put("description", "Missing Data on Request Body");
+		response.put("description", "Bad Request");
 		response.put("status", "400");
 		
 		return response;
