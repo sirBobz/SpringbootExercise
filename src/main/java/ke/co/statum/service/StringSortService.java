@@ -1,6 +1,6 @@
 package ke.co.statum.service;
 
-import java.util.ArrayList;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -64,21 +64,7 @@ public class StringSortService {
 		return inputArr;
 	}
 
-	public Object validateRequest(RequestModel request) {
-		ArrayList<Integer> result = new ArrayList<Integer>();
-		 
-		if (request.getIndex() < 0)
-			return result;
-	 
-		result.add(1);
-		for (int i = 1; i <= request.getIndex(); i++) {
-			for (int j = result.size() - 2; j >= 0; j--) {
-				result.set(j + 1, result.get(j) + result.get(j + 1));
-			}
-			result.add(1);
-		}
-		return result;
-	}
+	
 
 
 }
