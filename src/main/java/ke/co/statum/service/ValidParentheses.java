@@ -25,10 +25,14 @@ public class ValidParentheses {
 		}
 	}
 
-//	If the current index contains one of the open brackets push the string to stack.
-//	If the current index contains the close bracket. Pop the element from the top of stack
-//	If the pop element is the correct pair of the current index, continue traversing the string, else return false
-//	If end of string is return check whether stack is empty. If stack is empty return true else return false
+	// If the current index contains one of the open brackets push the string to
+	// stack.
+	// If the current index contains the close bracket. Pop the element from the top
+	// of stack
+	// If the pop element is the correct pair of the current index, continue
+	// traversing the string, else return false
+	// If end of string is return check whether stack is empty. If stack is empty
+	// return true else return false
 
 	public Object isValidparentheses(RequestModel request) {
 		char arr[] = request.getString().toCharArray();
@@ -39,16 +43,16 @@ public class ValidParentheses {
 			} else if (ch == ']') {
 				if (set.isEmpty() || set.peek() != '[') {
 					return false;
-				} 
+				}
 				set.pop();
 			} else if (ch == ')') {
-				if (set.isEmpty() ||  set.peek() != '(') 
+				if (set.isEmpty() || set.peek() != '(')
 					return false;
-				set.pop();	
+				set.pop();
 			} else if (ch == '}') {
-				if (set.isEmpty() ||  set.peek() != '{') 
+				if (set.isEmpty() || set.peek() != '{')
 					return false;
-				set.pop();	
+				set.pop();
 			}
 		}
 		return set.size() == 0;
